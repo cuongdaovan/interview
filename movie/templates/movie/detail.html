@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Listings @ Gv Cinema</h1>
+        <h2>{{movie.title}}</h2>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="#"><img style="width: 100%; height:100%" src={{movie.image}} alt="My image"/> </a>
+            </div>
+            <div class="col-sm-6">
+                <h4>Details</h4>
+                <div class="col">
+                    <p>Genre: {{movie.genre}}</p>
+                    <p>Language: {{movie.language}}</p>
+                    <p>Durations: {{movie.runtime}}</p>
+                    <p>User rating: {{movie.rating}} </p>
+                </div>
+                <h4>Synopsis</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

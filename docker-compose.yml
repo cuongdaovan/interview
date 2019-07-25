@@ -1,0 +1,13 @@
+version: "3"
+services:
+  interview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/Cinema/
+    image: django
+    stdin_open: true
+    tty: true
+    ports:
+      - 8080:8080
